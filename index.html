@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yıldız Uçucu - Aşkın En Güzel Şiiri</title>
+    <style>
+/* Arka Plan ve Temalar */
+.romantic-gradient {
+    background: linear-gradient(45deg, #ffb6d5 0%, #ff6b9d 33%, #ff9ff3 66%, #ff6b6b 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    min-height: 100vh;
+}
+.romantic-gradient.theme-pink {
+    background: linear-gradient(45deg, #ff6b9d 0%, #c44569 33%, #f8b500 66%, #ff3838 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+.romantic-gradient.theme-purple {
+    background: linear-gradient(45deg, #a55eea 0%, #26de81 33%, #fd79a8 66%, #fdcb6e 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+.romantic-gradient.theme-blue {
+    background: linear-gradient(45deg, #74b9ff 0%, #0984e3 33%, #fd79a8 66%, #fdcb6e 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Utility Sınıflar */
+.text-center { text-align: center; }
+.text-white { color: #fff; }
+.text-pink { color: #ff6b9d; }
+.text-yellow { color: #ffe066; }
+.text-blue { color: #74b9ff; }
+.text-gray { color: #444; }
+.text-lg { font-size: 1.25rem; }
+.text-xl { font-size: 1.5rem; }
+.text-2xl { font-size: 2rem; }
+.text-3xl { font-size: 2.5rem; }
+.text-4xl { font-size: 3rem; }
+.text-5xl { font-size: 3.5rem; }
+.text-bold { font-weight: bold; }
+.opacity-75 { opacity: 0.75; }
+.opacity-90 { opacity: 0.9; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.p-12 { padding: 3rem; }
+.rounded-xl { border-radius: 1rem; }
+.rounded-2xl { border-radius: 2rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.gap-4 { gap: 1rem; }
+.gap-8 { gap: 2rem; }
+.space-x-2 > * + * { margin-left: 0.5rem; }
+.space-x-4 > * + * { margin-left: 1rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.max-w-4xl { max-width: 56rem; }
+.max-w-5xl { max-width: 64rem; }
+.max-w-6xl { max-width: 72rem; }
+.max-w-7xl { max-width: 80rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mx-4 { margin-left: 1rem; margin-right: 1rem; }
+.mx-8 { margin-left: 2rem; margin-right: 2rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.pb-12 { padding-bottom: 3rem; }
+.w-full { width: 100%; }
+.h-64 { height: 16rem; }
+.grid { display: grid; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.gap-4 { gap: 1rem; }
+.gap-8 { gap: 2rem; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.bottom-4 { bottom: 1rem; }
+.left-1\/2 { left: 50%; }
+.transform { transform: translateX(-50%); }
+.-translate-x-1\/2 { transform: translateX(-50%); }
+.fixed { position: fixed; }
+.top-4 { top: 1rem; }
+.left-4 { left: 1rem; }
+.right-4 { right: 1rem; }
+.z-50 { z-index: 50; }
+.z-1000 { z-index: 1000; }
+.z-2000 { z-index: 2000; }
+.cursor-pointer { cursor: pointer; }
+.transition-all { transition: all 0.3s; }
+.duration-300 { transition-duration: 0.3s; }
+.font-bold { font-weight: bold; }
+.font-dancing { font-family: 'Dancing Script', cursive; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.bg-pink { background: #ff6b9d; }
+.bg-pink-500 { background: #ec4899; }
+.bg-pink-600 { background: #db2777; }
+.bg-gradient-pink { background: linear-gradient(90deg, #ff6b9d, #ffb6d5); }
+.bg-gradient-purple { background: linear-gradient(90deg, #a55eea, #fdcb6e); }
+.bg-gradient-blue { background: linear-gradient(90deg, #74b9ff, #fdcb6e); }
+.bg-gradient-red { background: linear-gradient(90deg, #ff3838, #f8b500); }
+.border-none { border: none; }
+.outline-none { outline: none; }
+.text-gray-800 { color: #2d3748; }
+.text-gray-500 { color: #6b7280; }
+.text-red-500 { color: #ef4444; }
+.text-red-700 { color: #b91c1c; }
+.bg-white { background: #fff; }
+.bg-gradient-to-r { background: linear-gradient(to right, #ff6b9d, #ffb6d5); }
+.bg-gradient-pink-purple { background: linear-gradient(90deg, #ff6b9d, #a55eea); }
+.bg-gradient-pink-blue { background: linear-gradient(90deg, #ff6b9d, #74b9ff); }
+.bg-gradient-red-orange { background: linear-gradient(90deg, #ff3838, #f8b500); }
+
+/* Kartlar ve Notlar */
+.poem-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    transition: box-shadow 0.3s, transform 0.3s;
+    /* Responsive padding ve margin */
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+.poem-card:hover, .poem-card:focus-within {
+    /* Sadece gölge büyüsün, scale ve rotate kaldırıldı */
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    transform: none;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .grid.lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (max-width: 768px) {
+    .grid.md\:grid-cols-2,
+    .grid.md\:grid-cols-3,
+    .grid.md\:grid-cols-4,
+    .grid.lg\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+    .mx-4, .mx-8 {
+        margin-left: 0.5rem !important;
+        margin-right: 0.5rem !important;
+    }
+    .max-w-6xl, .max-w-7xl, .max-w-5xl, .max-w-4xl {
+        max-width: 100% !important;
+    }
+    .p-8, .p-12, .p-6, .p-4 {
+        padding: 1rem !important;
+    }
+}
+@media (max-width: 480px) {
+    .poem-card {
+        padding: 0.7rem !important;
+        font-size: 0.95rem;
+    }
+    h1, h2, h3 {
+        font-size: 1.2em !important;
+    }
+    .heart-beat, .floating {
+        font-size: 2em !important;
+    }
+}
+
+/* Başlık ve Animasyonlar */
+.floating {
+    animation: floating 6s ease-in-out infinite;
+}
+@keyframes floating {
+    0%, 100% { transform: translateY(0);}
+    50% { transform: translateY(-20px);}
+}
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.heart-beat {
+    animation: heartBeat 2s ease-in-out infinite;
+}
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1);}
+    50% { transform: scale(1.1);}
+}
+
+/* Temalar için Butonlar */
+.theme-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    outline: none;
+    display: inline-block;
+}
+.theme-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+.theme-pink-btn { background: linear-gradient(90deg, #ff6b9d, #ffb6d5); }
+.theme-purple-btn { background: linear-gradient(90deg, #a55eea, #fdcb6e); }
+.theme-blue-btn { background: linear-gradient(90deg, #74b9ff, #fdcb6e); }
+.theme-default-btn { background: linear-gradient(90deg, #ff3838, #f8b500); }
+
+/* Sayaç */
+.love-counter {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Galeri */
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+}
+
+/* Yıldız Takımyıldızı */
+.star-constellation {
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+}
+.star-constellation:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+/* Kalp Yağmuru ve Parçacıklar */
+.falling-heart {
+    position: fixed;
+    font-size: 20px;
+    color: #ff6b9d;
+    pointer-events: none;
+    z-index: 1000;
+    animation: fall 3s linear forwards;
+}
+@keyframes fall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1;}
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0;}
+}
+.particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Pop-up */
+.love-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.97);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+    z-index: 2000;
+    animation: popupAppear 0.5s ease-out;
+}
+@keyframes popupAppear {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.5);}
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+}
+    </style>
+</head>
+<body id="mainBody" class="romantic-gradient">
+<!-- Tema Seçici -->
+<div class="fixed top-4 right-4 z-50 flex space-x-2">
+    <div class="theme-button theme-pink-btn" onclick="changeTheme('pink')" title="Pembe Tema"></div>
+    <div class="theme-button theme-purple-btn" onclick="changeTheme('purple')" title="Mor Tema"></div>
+    <div class="theme-button theme-blue-btn" onclick="changeTheme('blue')" title="Mavi Tema"></div>
+    <div class="theme-button theme-default-btn" onclick="changeTheme('default')" title="Varsayılan"></div>
+</div>
+
+<!-- Love Counter -->
+<div class="fixed top-4 left-4 z-50 poem-card p-4 rounded-xl">
+    <div class="love-counter text-center">
+        <div class="heart-beat text-2xl mb-2">💕</div>
+        <div>Seni seveli</div>
+        <div class="text-3xl font-bold" id="loveCounter">0</div>
+        <div>gün oldu</div>
+        <div class="text-sm mt-2 opacity-75">- Mahmut Sibal</div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="text-center py-12 fade-in" onclick="createHeartRain()">
+    <div class="floating">
+        <h1 class="text-6xl md:text-8xl font-bold text-white mb-4" style="font-family: 'Dancing Script', cursive; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+            Yıldız Uçucu
+        </h1>
+        <div class="heart-beat text-4xl mb-4">❤️</div>
+        <p class="text-xl md:text-2xl text-white opacity-90" style="font-family: 'Playfair Display', serif;">
+            Aşkın En Güzel Şiiri
+        </p>
+        <p class="text-sm text-white opacity-75 mt-2">✨ Başlığa tıkla kalp yağmuru için ✨</p>
+    </div>
+</header>
+
+<!-- Interactive Star Map -->
+<section class="mb-16 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-8" style="font-family: 'Dancing Script', cursive;">
+        Aşkımızın Yıldız Haritası
+    </h2>
+    <div class="relative h-64 poem-card rounded-2xl mx-4 md:mx-8 overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <svg width="100%" height="100%" viewBox="0 0 800 300">
+                <!-- Constellation 1 -->
+                <g class="star-constellation" onclick="showLoveMessage('Bizim aşkımız yıldızlar kadar parlak! ✨')">
+                    <circle cx="150" cy="80" r="3" fill="white"/>
+                    <circle cx="180" cy="60" r="3" fill="white"/>
+                    <circle cx="200" cy="90" r="3" fill="white"/>
+                    <circle cx="170" cy="110" r="3" fill="white"/>
+                    <line x1="150" y1="80" x2="180" y2="60" stroke="white" stroke-width="1" opacity="0.5"/>
+                    <line x1="180" y1="60" x2="200" y2="90" stroke="white" stroke-width="1" opacity="0.5"/>
+                    <line x1="200" y1="90" x2="170" y2="110" stroke="white" stroke-width="1" opacity="0.5"/>
+                    <line x1="170" y1="110" x2="150" y2="80" stroke="white" stroke-width="1" opacity="0.5"/>
+                </g>
+                
+                <!-- Constellation 2 -->
+                <g class="star-constellation" onclick="showLoveMessage('Sen benim kuzey yıldızımsın! 🌟')">
+                    <circle cx="400" cy="70" r="4" fill="yellow"/>
+                    <circle cx="420" cy="100" r="3" fill="white"/>
+                    <circle cx="380" cy="120" r="3" fill="white"/>
+                    <circle cx="440" cy="130" r="3" fill="white"/>
+                    <line x1="400" y1="70" x2="420" y2="100" stroke="white" stroke-width="1" opacity="0.5"/>
+                    <line x1="400" y1="70" x2="380" y2="120" stroke="white" stroke-width="1" opacity="0.5"/>
+                    <line x1="400" y1="70" x2="440" y2="130" stroke="white" stroke-width="1" opacity="0.5"/>
+                </g>
+                
+                <!-- Constellation 3 -->
+                <g class="star-constellation" onclick="showLoveMessage('Kalp şeklindeki takımyıldızımız! 💖')">
+                    <circle cx="600" cy="90" r="3" fill="pink"/>
+                    <circle cx="580" cy="110" r="3" fill="pink"/>
+                    <circle cx="620" cy="110" r="3" fill="pink"/>
+                    <circle cx="600" cy="140" r="3" fill="pink"/>
+                    <circle cx="600" cy="170" r="3" fill="pink"/>
+                    <line x1="600" y1="90" x2="580" y2="110" stroke="pink" stroke-width="1" opacity="0.7"/>
+                    <line x1="600" y1="90" x2="620" y2="110" stroke="pink" stroke-width="1" opacity="0.7"/>
+                    <line x1="580" y1="110" x2="600" y2="140" stroke="pink" stroke-width="1" opacity="0.7"/>
+                    <line x1="620" y1="110" x2="600" y2="140" stroke="pink" stroke-width="1" opacity="0.7"/>
+                    <line x1="600" y1="140" x2="600" y2="170" stroke="pink" stroke-width="1" opacity="0.7"/>
+                </g>
+            </svg>
+        </div>
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm opacity-75">
+            ✨ Yıldızlara tıkla sürpriz mesajlar için ✨
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 pb-12">
+    <!-- Akrostiş Şiirler -->
+    <section class="mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12" style="font-family: 'Dancing Script', cursive;">
+            Senin Adınla Yazılan Şiirler
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- İlk Akrostiş -->
+            <div class="poem-card rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-2xl font-bold text-white mb-6 text-center" style="font-family: 'Dancing Script', cursive;">
+                    YILDIZ UÇUCU
+                </h3>
+                <div class="text-white text-lg leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p><strong class="text-yellow-300">Y</strong>üreğimde saklı en güzel sır</p>
+                    <p><strong class="text-yellow-300">I</strong>çimde yanan aşkın ateşi</p>
+                    <p><strong class="text-yellow-300">L</strong>eyleklerin getirdiği müjde</p>
+                    <p><strong class="text-yellow-300">D</strong>erin denizlerdeki inci</p>
+                    <p><strong class="text-yellow-300">I</strong>lk görüşte başlayan hikaye</p>
+                    <p><strong class="text-yellow-300">Z</strong>amanın durduğu an</p>
+                    <br>
+                    <p><strong class="text-pink-300">U</strong>çsuz bucaksız sevgim</p>
+                    <p><strong class="text-pink-300">Ç</strong>içekler açar adınla</p>
+                    <p><strong class="text-pink-300">U</strong>mudum, hayalim, her şeyim</p>
+                    <p><strong class="text-pink-300">C</strong>ennetten bir melek</p>
+                    <p><strong class="text-pink-300">U</strong>çuyor kalbimde hep</p>
+                </div>
+            </div>
+
+            <!-- İkinci Akrostiş -->
+            <div class="poem-card rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-2xl font-bold text-white mb-6 text-center" style="font-family: 'Dancing Script', cursive;">
+                    YILDIZ UÇUCU
+                </h3>
+                <div class="text-white text-lg leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p><strong class="text-yellow-300">Y</strong>ıldızların en parlağı</p>
+                    <p><strong class="text-yellow-300">I</strong>htiraslı bakışların</p>
+                    <p><strong class="text-yellow-300">L</strong>atif sesinin büyüsü</p>
+                    <p><strong class="text-yellow-300">D</strong>ünyamı aydınlatan</p>
+                    <p><strong class="text-yellow-300">I</strong>lham veren güzelliğin</p>
+                    <p><strong class="text-yellow-300">Z</strong>evk alıyorum varlığından</p>
+                    <br>
+                    <p><strong class="text-pink-300">U</strong>yku getirmeyen hasret</p>
+                    <p><strong class="text-pink-300">Ç</strong>ılgınca seviyorum seni</p>
+                    <p><strong class="text-pink-300">U</strong>çuruyorsun beni</p>
+                    <p><strong class="text-pink-300">C</strong>an verircesine</p>
+                    <p><strong class="text-pink-300">U</strong>çsuz sevgimle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Romantik Şiirler -->
+    <section class="mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12" style="font-family: 'Dancing Script', cursive;">
+            Sana Yazılan Şiirler
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <!-- Şiir 1 -->
+            <div class="poem-card rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold text-pink-300 mb-4 text-center" style="font-family: 'Dancing Script', cursive;">
+                    Gözlerindeki Yıldızlar
+                </h3>
+                <div class="text-white text-base leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p>Gözlerinde yıldızlar dans ediyor,</p>
+                    <p>Her bakışında aşk fısıldıyor.</p>
+                    <p>Yüreğim çarpıyor senin için,</p>
+                    <p>Nefesim kesiliyor her seferinde.</p>
+                    <br>
+                    <p>Sen benim en güzel rüyamsın,</p>
+                    <p>Uçucu gibi hafif, zarif.</p>
+                    <p>Kalbimde taht kurmuş kraliçem,</p>
+                    <p>Sonsuzluğa kadar sevgilim.</p>
+                </div>
+            </div>
+
+            <!-- Şiir 2 -->
+            <div class="poem-card rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold text-pink-300 mb-4 text-center" style="font-family: 'Dancing Script', cursive;">
+                    Tutkulu Geceler
+                </h3>
+                <div class="text-white text-base leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p>Gecenin sessizliğinde,</p>
+                    <p>Adını fısıldıyorum yıldızlara.</p>
+                    <p>Ay bile kıskanıyor güzelliğini,</p>
+                    <p>Sen varsın ya, başka ne lazım.</p>
+                    <br>
+                    <p>İhtiras dolu bu kalp,</p>
+                    <p>Sadece senin için atıyor.</p>
+                    <p>Her nefesimde sen varsın,</p>
+                    <p>Her düşümde, her hayalimde.</p>
+                </div>
+            </div>
+
+            <!-- Şiir 3 -->
+            <div class="poem-card rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold text-pink-300 mb-4 text-center" style="font-family: 'Dancing Script', cursive;">
+                    Aşkın Melodisi
+                </h3>
+                <div class="text-white text-base leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p>Sesinin melodisi kulaklarımda,</p>
+                    <p>En güzel şarkı senin gülüşün.</p>
+                    <p>Ellerinin dokunuşu büyülü,</p>
+                    <p>Kalbimi çalıyor her seferinde.</p>
+                    <br>
+                    <p>Romantizmin ta kendisisin,</p>
+                    <p>Şehvetin en güzel hali.</p>
+                    <p>Benimsin, ben de seninim,</p>
+                    <p>Sonsuza dek böyle kalalım.</p>
+                </div>
+            </div>
+
+            <!-- Şiir 4 -->
+            <div class="poem-card rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold text-pink-300 mb-4 text-center" style="font-family: 'Dancing Script', cursive;">
+                    Sonsuz Aşk
+                </h3>
+                <div class="text-white text-base leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p>Zamanın ötesinde bir aşk bu,</p>
+                    <p>Sınırları aşan bir tutku.</p>
+                    <p>Sen benim evrenimsin,</p>
+                    <p>Güneşim, ayım, yıldızlarım.</p>
+                    <br>
+                    <p>Her sabah seninle uyanmak,</p>
+                    <p>Her gece sana sarılmak.</p>
+                    <p>İşte benim en büyük hayalim,</p>
+                    <p>Yıldız Uçucu, tek aşkım.</p>
+                </div>
+            </div>
+
+            <!-- Şiir 5 -->
+            <div class="poem-card rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold text-pink-300 mb-4 text-center" style="font-family: 'Dancing Script', cursive;">
+                    Kalbimdeki Kraliçe
+                </h3>
+                <div class="text-white text-base leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p>Taçsız kraliçem benim,</p>
+                    <p>Sarayın kalbimin derinlikleri.</p>
+                    <p>Her adımında zarafet,</p>
+                    <p>Her sözünde büyü var.</p>
+                    <br>
+                    <p>Uçucu gibi hafifsin ama,</p>
+                    <p>Kalbimde ağır bir yer tutuyorsun.</p>
+                    <p>Sensiz geçen her saniye,</p>
+                    <p>Bana yıllarca geliyor.</p>
+                </div>
+            </div>
+
+            <!-- Şiir 6 -->
+            <div class="poem-card rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold text-pink-300 mb-4 text-center" style="font-family: 'Dancing Script', cursive;">
+                    Ebedi Sevda
+                </h3>
+                <div class="text-white text-base leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p>Mevsimler değişse de,</p>
+                    <p>Yıllar geçse de.</p>
+                    <p>Bu aşk hiç solmayacak,</p>
+                    <p>Kalbimde hep yaşayacak.</p>
+                    <br>
+                    <p>Yıldız Uçucu adın,</p>
+                    <p>Dilimde en tatlı kelime.</p>
+                    <p>Seni seviyorum demek,</p>
+                    <p>En büyük mutluluğum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mahmut'un Özel Mesajları -->
+    <section class="mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12" style="font-family: 'Dancing Script', cursive;">
+            Mahmut'un Kalp Dolu Sözleri
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- Mahmut'un İlk Mesajı -->
+            <div class="poem-card rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+                <div class="text-center mb-6">
+                    <div class="text-4xl mb-4">👨‍❤️‍👩</div>
+                    <h3 class="text-2xl font-bold text-white" style="font-family: 'Dancing Script', cursive;">
+                        Mahmut'un Aşk İtirafı
+                    </h3>
+                </div>
+                <div class="text-white text-lg leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p class="mb-4">"Yıldız Uçucu, sen benim hayatıma gelen en güzel mucizesin. 
+                    Adın bile kalbimdeki en tatlı melodiyi çalıyor."</p>
+                    
+                    <p class="mb-4">"Seninle geçirdiğim her an, benim için bir şiir, bir rüya, 
+                    bir masalın en güzel sayfası."</p>
+                    
+                    <p class="text-right text-pink-300 font-bold">- Mahmut Sibal 💕</p>
+                </div>
+            </div>
+
+            <!-- Mahmut'un İkinci Mesajı -->
+            <div class="poem-card rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+                <div class="text-center mb-6">
+                    <div class="text-4xl mb-4">💌</div>
+                    <h3 class="text-2xl font-bold text-white" style="font-family: 'Dancing Script', cursive;">
+                        Sonsuz Sevgi Sözü
+                    </h3>
+                </div>
+                <div class="text-white text-lg leading-relaxed" style="font-family: 'Playfair Display', serif;">
+                    <p class="mb-4">"Gözlerindeki ışık benim rehberim, gülüşün benim mutluluğum. 
+                    Sen olmadan geçen her saniye eksik kalıyor."</p>
+                    
+                    <p class="mb-4">"Yıldız Uçucu, sen benim kalbimin tek sahibi, ruhunun eş yarısısın. 
+                    Seninle sonsuza kadar dans etmek istiyorum."</p>
+                    
+                    <p class="text-right text-pink-300 font-bold">- Aşkla, Mahmut 🌹</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mahmut & Yıldız Uçucu Özel Bölümü -->
+    <section class="mb-16 fade-in">
+        <div class="poem-card rounded-2xl p-12 max-w-5xl mx-auto text-center">
+            <div class="heart-beat text-6xl mb-6">💑</div>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8" style="font-family: 'Dancing Script', cursive;">
+                Mahmut ❤️ Yıldız Uçucu
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center">
+                    <div class="text-3xl mb-4">🌟</div>
+                    <h3 class="text-xl font-bold text-yellow-300 mb-2">İlk Buluşma</h3>
+                    <p class="text-white opacity-90">O gün kalbim ilk kez gerçek aşkı tanıdı</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-3xl mb-4">💕</div>
+                    <h3 class="text-xl font-bold text-pink-300 mb-2">İlk "Seni Seviyorum"</h3>
+                    <p class="text-white opacity-90">Kelimeler yetersiz kaldı o anda</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-3xl mb-4">♾️</div>
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Sonsuz Gelecek</h3>
+                    <p class="text-white opacity-90">Seninle her gün yeni bir başlangıç</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-8 text-white">
+                <p class="text-2xl md:text-3xl leading-relaxed mb-6" style="font-family: 'Dancing Script', cursive;">
+                    "Yıldız Uçucu, sen benim hayatımın en güzel şiirisin. 
+                    Bu web sitesindeki her kelime, sana olan sonsuz sevgimin bir yansıması."
+                </p>
+                <p class="text-xl font-bold">- Mahmut Sibal, seni sonsuza kadar seven adam 💖</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Özel Mesaj -->
+    <section class="text-center fade-in">
+        <div class="poem-card rounded-2xl p-12 max-w-4xl mx-auto">
+            <div class="heart-beat text-6xl mb-6">💖</div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'Dancing Script', cursive;">
+                Sana Özel
+            </h2>
+            <p class="text-xl md:text-2xl text-white leading-relaxed mb-8" style="font-family: 'Playfair Display', serif;">
+                Bu web sitesi, senin için özel olarak hazırlandı. Her kelime, her satır, 
+                sana olan sevgimin bir yansıması. Yıldız Uçucu, sen benim hayatımın 
+                en güzel şiirisin. ✨
+            </p>
+            <div class="flex justify-center space-x-4 text-4xl">
+                <span class="floating">🌹</span>
+                <span class="floating" style="animation-delay: 0.5s;">💕</span>
+                <span class="floating" style="animation-delay: 1s;">🌟</span>
+                <span class="floating" style="animation-delay: 1.5s;">💖</span>
+                <span class="floating" style="animation-delay: 2s;">🌹</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="text-center py-8 text-white opacity-75">
+    <p style="font-family: 'Dancing Script', cursive;" class="text-lg">
+        Sonsuz sevgiyle... 💕
+    </p>
+</footer>
+
+<script>
+    // Love messages array
+    const loveMessages = [
+        "Sen benim kalbimin tek sahibisin! 💖 - Mahmut",
+        "Gözlerin benim için en güzel yıldızlar! ✨ - Mahmut Sibal",
+        "Seninle geçen her an bir mucize! 🌟 - Mahmut",
+        "Aşkımız sonsuza kadar sürecek! 💕 - Mahmut Sibal",
+        "Sen benim hayatımın anlamısın! 🌹 - Mahmut",
+        "Kalbim sadece senin için çarpıyor! 💓 - Mahmut Sibal",
+        "Sen benim rüyalarımın kraliçesisin! 👑 - Mahmut",
+        "Seninle olmak cennet gibi! 😇 - Mahmut Sibal",
+        "Yıldız Uçucu, sen benim her şeyimsin! 🌟 - Mahmut",
+        "Adın bile kalbimde en güzel şarkı! 🎵 - Mahmut Sibal",
+        "Seninle dans etmek istiyorum sonsuza kadar! 💃 - Mahmut",
+        "Sen benim hayallerimin gerçeği oldun! ✨ - Mahmut Sibal"
+    ];
+
+    // Love counter
+    let loveStartDate = new Date('2025-06-18'); // Aşkın başlangıç tarihi
+    function updateLoveCounter() {
+        const now = new Date();
+        const diffTime = Math.abs(now - loveStartDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        document.getElementById('loveCounter').textContent = diffDays;
+    }
+
+    // Heart rain effect
+    function createHeartRain() {
+        for (let i = 0; i < 20; i++) {
+            setTimeout(() => {
+                const heart = document.createElement('div');
+                heart.className = 'falling-heart';
+                heart.innerHTML = ['💖', '💕', '💗', '💓', '💝'][Math.floor(Math.random() * 5)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.body.appendChild(heart);
+                
+                setTimeout(() => {
+                    heart.remove();
+                }, 4000);
+            }, i * 100);
+        }
+    }
+
+    // Particle effects following mouse
+    let particles = [];
+    document.addEventListener('mousemove', function(e) {
+        if (particles.length < 10) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = e.clientX + 'px';
+            particle.style.top = e.clientY + 'px';
+            document.body.appendChild(particle);
+            particles.push(particle);
+            
+            setTimeout(() => {
+                particle.style.opacity = '0';
+                particle.style.transform = 'scale(0)';
+                setTimeout(() => {
+                    particle.remove();
+                    particles = particles.filter(p => p !== particle);
+                }, 500);
+            }, 1000);
+        }
+    });
+
+    // Love message popup
+    function showLoveMessage(message = null) {
+        const msg = message || loveMessages[Math.floor(Math.random() * loveMessages.length)];
+        
+        const popup = document.createElement('div');
+        popup.className = 'love-popup';
+        popup.innerHTML = `
+            <div class="text-center">
+                <div class="text-4xl mb-4">💖</div>
+                <p class="text-lg text-gray-800 mb-4" style="font-family: 'Dancing Script', cursive;">${msg}</p>
+                <button onclick="this.parentElement.parentElement.remove()" 
+                        class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition-all duration-300">
+                    💕 Tamam
+                </button>
+            </div>
+        `;
+        
+        document.body.appendChild(popup);
+        
+        setTimeout(() => {
+            popup.remove();
+        }, 5000);
+    }
+
+    // Theme changer
+function changeTheme(theme) {
+    const body = document.getElementById('mainBody');
+    // Önce tüm theme-xxx sınıflarını temizle, romantic-gradient'i koru
+    body.className = body.className
+        .split(' ')
+        .filter(c => !/^theme-\w+/.test(c))
+        .join(' ')
+        .trim();
+    if (theme !== 'default') {
+        body.classList.add('theme-' + theme);
+    }
+}
+
+    // Initialize everything when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        updateLoveCounter();
+        setInterval(updateLoveCounter, 86400000); // Update daily
+        
+        // Show welcome message
+        setTimeout(() => {
+            showLoveMessage("Hoş geldin aşkım! Bu site tamamen senin için hazırlandı! 💖 - Mahmut Sibal");
+        }, 2000);
+        
+        // Random love messages
+        setInterval(() => {
+            if (Math.random() < 0.3) { // 30% chance every 10 seconds
+                showLoveMessage();
+            }
+        }, 10000);
+        
+        // Enhanced card hover effects
+        const cards = document.querySelectorAll('.poem-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 20px 40px rgba(255, 255, 255, 0.2)';
+                this.style.transform = 'none';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '';
+                this.style.transform = 'none';
+            });
+        });
+
+        // Random star effects
+        function createStar() {
+            const star = document.createElement('div');
+            star.innerHTML = '⭐';
+            star.style.position = 'fixed';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.fontSize = Math.random() * 20 + 10 + 'px';
+            star.style.opacity = Math.random();
+            star.style.pointerEvents = 'none';
+            star.style.zIndex = '1';
+            star.style.animation = 'floating 4s ease-in-out infinite';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            
+            document.body.appendChild(star);
+            
+            setTimeout(() => {
+                star.remove();
+            }, 8000);
+        }
+
+        setInterval(createStar, 3000);
+        
+        // Initial stars
+        for(let i = 0; i < 5; i++) {
+            setTimeout(createStar, i * 1000);
+        }
+    });
+</script>
+</body>
+</html>
