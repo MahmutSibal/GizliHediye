@@ -332,7 +332,7 @@
 </div>
 
 <!-- Header -->
-<header class="text-center py-12 fade-in" onclick="createHeartRain()">
+<header id="headerSection" class="text-center py-12 fade-in" onclick="createHeartRain()">
     <div class="floating">
         <h1 class="text-6xl md:text-8xl font-bold text-white mb-4" style="font-family: 'Dancing Script', cursive; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
             Yıldız Uçucu
@@ -400,7 +400,7 @@
 <!-- Main Content -->
 <main class="container mx-auto px-4 pb-12">
     <!-- Akrostiş Şiirler -->
-    <section class="mb-16 fade-in">
+    <section id="poemsSection" class="mb-16 fade-in">
         <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12" style="font-family: 'Dancing Script', cursive;">
             Senin Adınla Yazılan Şiirler
         </h2>
@@ -568,7 +568,7 @@
     </section>
 
     <!-- Mahmut'un Özel Mesajları -->
-    <section class="mb-16 fade-in">
+    <section id="loveSection" class="mb-16 fade-in">
         <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12" style="font-family: 'Dancing Script', cursive;">
             Mahmut'un Kalp Dolu Sözleri
         </h2>
@@ -673,7 +673,66 @@
             </div>
         </div>
     </section>
+
+    <!-- Mahmut'un Güncel Şiirleri -->
+    <section class="mb-16 fade-in">
+        <div class="poem-card rounded-2xl p-12 max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center" style="font-family: 'Dancing Script', cursive;">
+                Mahmut'un Güncel Şiirleri
+            </h2>
+            <form id="poemForm" class="mb-8">
+                <div class="mb-4">
+                    <textarea id="poemInput" rows="4" maxlength="300" placeholder="4'lük şiirinizi buraya yazın..." class="w-full p-4 rounded-xl" style="resize:vertical; font-family:'Playfair Display',serif;"></textarea>
+                </div>
+                <button type="submit" class="bg-pink-500 text-white px-6 py-2 rounded-xl font-bold cursor-pointer transition-all duration-300 hover:bg-pink-600">
+                    Kaydet
+                </button>
+            </form>
+            <div id="poemList" class="space-y-4"></div>
+        </div>
+    </section>
+
+    <!-- Aşk Ölçer -->
+    <section id="loveMeterSection" class="mb-16 fade-in">
+        <div class="poem-card rounded-2xl p-12 max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'Dancing Script', cursive;">
+                Aşk Ölçer
+            </h2>
+            <form id="loveMeterForm" class="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
+                <input type="text" id="name1" maxlength="20" placeholder="Senin adın" class="p-3 rounded-xl text-center" style="font-family:'Playfair Display',serif;"/>
+                <span class="text-white text-2xl font-bold">+</span>
+                <input type="text" id="name2" maxlength="20" placeholder="Sevdiğinin adı" class="p-3 rounded-xl text-center" style="font-family:'Playfair Display',serif;"/>
+                <button type="submit" class="bg-pink-500 text-white px-6 py-2 rounded-xl font-bold cursor-pointer transition-all duration-300 hover:bg-pink-600">
+                    Ölç!
+                </button>
+            </form>
+            <div id="loveMeterResult" class="text-2xl md:text-3xl font-bold text-pink mb-2" style="font-family:'Dancing Script',cursive;"></div>
+            <div id="loveMeterBar" style="height:24px; background:rgba(255,255,255,0.2); border-radius:12px; overflow:hidden; max-width:350px; margin:0 auto;">
+                <div id="loveMeterFill" style="height:100%; width:0; background:linear-gradient(90deg,#ff6b9d,#ffb6d5); transition:width 1s;"></div>
+            </div>
+        </div>
+    </section>
 </main>
+
+<!-- Mobil Navigasyon Menüsü -->
+<nav id="mobileNav" class="fixed bottom-0 left-0 w-full z-50 bg-gradient-pink flex justify-around items-center py-2 md:hidden" style="box-shadow:0 -2px 16px rgba(0,0,0,0.08);">
+    <button onclick="scrollToSection('headerSection')" class="flex flex-col items-center text-white focus:outline-none">
+        <span class="text-xl">🏠</span>
+        <span style="font-size:0.8em;">Başlık</span>
+    </button>
+    <button onclick="scrollToSection('poemsSection')" class="flex flex-col items-center text-white focus:outline-none">
+        <span class="text-xl">📝</span>
+        <span style="font-size:0.8em;">Akrostiş</span>
+    </button>
+    <button onclick="scrollToSection('loveSection')" class="flex flex-col items-center text-white focus:outline-none">
+        <span class="text-xl">💬</span>
+        <span style="font-size:0.8em;">Mesajlar</span>
+    </button>
+    <button onclick="scrollToSection('loveMeterSection')" class="flex flex-col items-center text-white focus:outline-none">
+        <span class="text-xl">💖</span>
+        <span style="font-size:0.8em;">Aşk Ölçer</span>
+    </button>
+</nav>
 
 <!-- Footer -->
 <footer class="text-center py-8 text-white opacity-75">
@@ -786,6 +845,14 @@ function changeTheme(theme) {
     }
 }
 
+    // Mobil alt menü scroll fonksiyonu
+function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
     // Initialize everything when page loads
     document.addEventListener('DOMContentLoaded', function() {
         updateLoveCounter();
@@ -844,6 +911,80 @@ function changeTheme(theme) {
             setTimeout(createStar, i * 1000);
         }
     });
+
+    // Mahmut'un Güncel Şiirleri - LocalStorage ile
+function renderPoems() {
+    const poemList = document.getElementById('poemList');
+    const poems = JSON.parse(localStorage.getItem('mahmutPoems') || '[]');
+    poemList.innerHTML = '';
+    if (poems.length === 0) {
+        poemList.innerHTML = '<div class="text-white opacity-75 text-center">Henüz şiir eklenmedi.</div>';
+        return;
+    }
+    poems.forEach((poem, i) => {
+        poemList.innerHTML += `
+            <div class="poem-card rounded-xl p-4 text-white" style="font-family:'Playfair Display',serif;">
+                <div>${poem.replace(/\n/g, '<br>')}</div>
+                <div class="text-right text-sm opacity-75 mt-2">
+                    <button onclick="deletePoem(${i})" class="text-pink-300 hover:underline" title="Sil">Sil</button>
+                </div>
+            </div>
+        `;
+    });
+}
+function savePoem(e) {
+    e.preventDefault();
+    const input = document.getElementById('poemInput');
+    const value = input.value.trim();
+    if (value.split('\n').length < 4 || value === '') {
+        alert('Lütfen en az 4 satırlık bir şiir yazın.');
+        return;
+    }
+    const poems = JSON.parse(localStorage.getItem('mahmutPoems') || '[]');
+    poems.unshift(value);
+    localStorage.setItem('mahmutPoems', JSON.stringify(poems));
+    input.value = '';
+    renderPoems();
+}
+function deletePoem(index) {
+    const poems = JSON.parse(localStorage.getItem('mahmutPoems') || '[]');
+    poems.splice(index, 1);
+    localStorage.setItem('mahmutPoems', JSON.stringify(poems));
+    renderPoems();
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('poemForm');
+    if(form) form.onsubmit = savePoem;
+    renderPoems();
+});
+
+// Aşk Ölçer Scripti
+document.getElementById('loveMeterForm').onsubmit = function(e) {
+    e.preventDefault();
+    const name1 = document.getElementById('name1').value.trim();
+    const name2 = document.getElementById('name2').value.trim();
+    const result = document.getElementById('loveMeterResult');
+    const fill = document.getElementById('loveMeterFill');
+    if (!name1 || !name2) {
+        result.textContent = "Lütfen iki isim de girin!";
+        fill.style.width = "0";
+        return;
+    }
+    // Rastgele ama yüksek bir aşk yüzdesi (gerçek çiftler için sabit de yapabilirsin)
+    let percent = Math.floor(85 + Math.random() * 15);
+    // Eğer Mahmut ve Yıldız yazılırsa hep 100 olsun
+    if (
+        (name1.toLowerCase().includes("mahmut") && name2.toLowerCase().includes("yıldız")) ||
+        (name2.toLowerCase().includes("mahmut") && name1.toLowerCase().includes("yıldız"))
+    ) {
+        percent = 100;
+    }
+    result.innerHTML = `<span class="heart-beat">💖</span> ${name1} + ${name2} = %${percent} aşk uyumu! <span class="heart-beat">💖</span>`;
+    fill.style.width = "0";
+    setTimeout(() => {
+        fill.style.width = percent + "%";
+    }, 100);
+};
 </script>
 </body>
 </html>
